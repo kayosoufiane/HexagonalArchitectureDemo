@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class GetStockPositionAndMarketValueApiResponseDto {
     String symbol;
-    Integer quantity;
+    Number quantity;
     String currencyCode;
     Number cost;
     Number marketValue;
