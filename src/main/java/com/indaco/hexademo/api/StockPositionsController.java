@@ -17,8 +17,11 @@ public class StockPositionsController {
     Mono<GetStockPositionAndMarketValueApiResponseDto> getPositionAndMarketValue(
             @PathVariable String symbol
     ) {
-        return getStockPositionService.get(symbol).map(stockPosition -> new GetStockPositionAndMarketValueApiResponseDto(symbol,
-                stockPosition.getQuantity(), stockPosition.getCurrencyCode(), stockPosition.getCost(),
+        return getStockPositionService.get(symbol).map(stockPosition -> new GetStockPositionAndMarketValueApiResponseDto(
+        		symbol,
+                stockPosition.getQuantity(), 
+                stockPosition.getCurrencyCode(), 
+                stockPosition.getCost(),
                 // placeholders
                 0.0
             )
